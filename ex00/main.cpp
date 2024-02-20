@@ -6,7 +6,7 @@
 /*   By: gasouza <gasouza@student.42sp.org.br >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 05:48:47 by gasouza           #+#    #+#             */
-/*   Updated: 2024/02/19 06:59:36 by gasouza          ###   ########.fr       */
+/*   Updated: 2024/02/20 07:05:51 by gasouza          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,15 @@ void subjectTests()
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
+    std::cout << std::endl;
+
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
+
+    std::cout << std::endl;
 
     delete meta;
     delete j;
@@ -50,8 +54,12 @@ void wrongClassesTests()
 
     const WrongAnimal* c = new WrongCat();
 
+    std::cout << std::endl;
+    
     std::cout << c->getType() << " " << std::endl;
     c->makeSound();
+
+    std::cout << std::endl;
 
     delete c;
 }
@@ -66,12 +74,16 @@ void extraTests()
     const Dog *d = new Dog(*c);
     Dog e = *d;
 
+    std::cout << std::endl;
+
     std::cout << a->getType() << " " << std::endl;
     std::cout << b.getType() << " " << std::endl;
     std::cout << c->getType() << " " << std::endl;
     std::cout << d->getType() << " " << std::endl;
     std::cout << e.getType() << " " << std::endl;
     
+    std::cout << std::endl;
+
     delete a;
     delete c;
     delete d;
